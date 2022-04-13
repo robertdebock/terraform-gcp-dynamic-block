@@ -9,7 +9,7 @@ resource "google_compute_firewall" "default" {
     for_each = var.allow
     content {
       protocol = allow.value.protocol
-      ports     = allow.value.ports
+      ports    = allow.value.ports
     }
   }
   source_ranges = ["0.0.0.0/0"]
